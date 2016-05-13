@@ -20,6 +20,185 @@
 <link rel="stylesheet" type="text/css" href="engine1/style.css" />
 <script type="text/javascript" src="engine1/jquery.js"></script>
 <!-- End WOWSlider.com HEAD section -->
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Menu Flottante Inizio -->
+<style>
+#float_main{
+  width:100%;
+  height:40px;
+  display:block;
+  padding:0;
+  margin:0 0 22px 0;
+z-index:100;
+  top:0px;
+left:0px;
+position:fixed;
+    box-shadow:2px 2px 5px  #333; /* Ombreggiatura */
+-moz-box-box-shadow:2px 2px 5px  #333;
+-web-kit-box-shadow:2px 2px 5px  #333;
+-goog-ms-box-shadow:2px 2px 5px  #333;
+background:#191919; /* Colore sfondo menu */
+}
+#float_nav{
+  float:left;
+  width:700px;
+  height:40px;
+  display:block;
+  padding:0;
+  margin-left:40px;
+}
+#float_nav ul{
+  float:left;
+  margin:0;
+  padding:0;
+}
+#float_nav li{
+  float:left;
+  list-style:none;
+  line-height:40px;
+  margin:0;
+  padding:0
+background:#191919;
+}
+#float_nav li a, #float_nav li a:link{
+  color:#fff;
+  display:block;
+  margin:0;
+font:16px trebuchet, georgia, verdana; /* Famiglie e dimensioni di caratteri */
+ padding:10px;
+ text-decoration:none;
+}
+#float_nav li a:hover, #float_nav li a:active, #float_nav .current_page_item a  {
+  color:#fff;
+  padding:10px;
+background: rgb(0,192,255); /* Colore al passaggio del cursore */
+background: -moz-linear-gradient(top,  rgba(0,192,255,0.8) 0%, rgba(0,192,255,0.8) 80%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,192,255,0.8)), color-stop(80%,rgba(0,192,255,0.8))); /* Opacità 80% */
+background: -webkit-linear-gradient(top,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%);
+background: -o-linear-gradient(top,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%); 
+background: -ms-linear-gradient(top,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%); 
+background: linear-gradient(to bottom,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#00C0FF&#39;, endColorstr=&#39;#00C0FF&#39;,GradientType=0 ); 
+}
+#float_nav li li a, #float_nav li li a:link, #float_nav li li a:visited{
+  font-size: 14px; /* Dimensione caratteri voci secondarie */
+background:#191919;
+  color: #fff; /* Colore del testo */
+  width: 150px;
+  margin: 0;
+  padding: 0px 10px;
+  line-height:30px;
+  position: relative;
+}
+#float_nav li li a:hover, #float_nav li li a:active {
+  color: #fff;
+background: rgb(0,192,255); 
+background: -moz-linear-gradient(top,  rgba(0,192,255,0.8) 0%, rgba(0,192,255,0.8) 80%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,192,255,0.8)), color-stop(80%,rgba(0,192,255,0.8))); 
+background: -webkit-linear-gradient(top,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%); 
+background: -o-linear-gradient(top,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%); 
+background: -ms-linear-gradient(top,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%); 
+background: linear-gradient(to bottom,  rgba(0,192,255,0.8) 0%,rgba(0,192,255,0.8) 80%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#00C0FF&#39;, endColorstr=&#39;#00C0FF&#39;,GradientType=0 ); 
+}
+#float_nav li ul{
+  z-index:9999;
+  position:absolute;
+  left:-999em;
+  height:auto;
+  width:170px;
+  margin:0px;
+  padding:0px
+}
+#float_nav li:hover ul, #float_nav li li:hover ul, #float_nav li li li:hover ul, #float_nav li.sfhover ul, #topfloat_nav li li.sfhover ul, #topfloat_nav li li li.sfhover ul{
+  left:auto
+}
+#float_nav li:hover, #float_nav li.sfhover{
+  position:static
+}
+#float_dropdown {
+  float:right;
+  width:250px; /* Larghezza del menù con le icone */
+  padding:0px 0px ;
+  margin:9px 10px 0px 0px;
+   }
+#float_dropdown img
+{
+margin-left:5px; /* Posizionamento laterale icone */
+margin-top:-3px; /* Posizionamento verticale icone */
+height:32px; /* Dimensione icone */
+border:none;
+}
+</style>
+<!-- Inizio Elementi del Menù -->
+  <div id='float_main'>
+     <div id='float_nav'>
+         <ul>
+           <li><a href=''>Home</a></li>
+           <li><a href='#'>About</a>
+           <ul>
+           <li><a href='#'>Bio</a></li>
+           <li><a href='#'>Privacy</a></li>
+           <li><a href='#'>Gallery</a></li>
+           </ul>
+          </li>
+           <li><a href='#'>Strumenti</a>
+               <ul>
+                  <li><a href='#'>Voce 1</a></li>
+                  <li><a href='#'>Voce 2</a></li>
+                  <li><a href='#'>Voce 3</a></li>
+                  <li><a href='#'>Voce 4</a></li>
+                  <li><a href='#'>Voce 5</a></li>
+                  <li><a href='#'>Voce 6</a></li>
+               </ul>
+           </li>
+    <li><a href='#'>Etichette</a>              
+             <ul>
+                  <li><a href='#'>Widget</a></li>
+                  <li><a href='#'>Modelli</a></li>
+                  <li><a href='#'>SEO</a></li>
+                  <li><a href='#'>Effetti</a></li>
+                  <li><a href='#'>Blogger</a></li>
+                  <li><a href='#'>Dynamic Views</a></li>
+                  <li><a href='#'>Android</a></li>
+                  <li><a href='#'>Software</a></li>
+               </ul>
+           </li>
+             <li><a href='#'>Contattaci</a>           
+           </li>
+         </ul>
+      </div>
+<!-- Inizio icone social -->
+      <div id='float_dropdown'>         
+<a href='http://feeds.feedburner.com/ideepercomputeredinternet/zUQN' target='_blank'><img alt='Iscriviti ai Feed' src='https://lh5.googleusercontent.com/-lNomLqps3b0/UhKcma55h8I/AAAAAAAAjHU/Omv7xrh31V8/s72/rss.png' title='Iscriviti ai Feed'/></a>
+<a href='http://www.facebook.com/parsifal32' target='_blank'><img alt='Aggiungimi su Facebook' src='https://lh3.googleusercontent.com/-El4u0ba7djM/UhKcexjd-2I/AAAAAAAAjHE/G0Cp6FU2BnA/s72/facebook.png' title='Aggiungimi su Facebook'/></a>
+<a href='https://twitter.com/parsifal32' target='_blank'><img alt='Seguimi su Twitter' src='https://lh6.googleusercontent.com/-6nyW-ClSo7E/UhKcuogZhZI/AAAAAAAAjHk/kNDX7gzsFGM/s72/twitter.png' title='Seguimi su Twitter'/></a>
+<a href='https://plus.google.com/111056841635962157738' target='_blank'><img alt='Aggiungimi su Google+' src='https://lh3.googleusercontent.com/-S3AWUMqyP-Y/UhKcj6ol7HI/AAAAAAAAjHM/gJl4lH8R464/s72/googleplus.png' title='Aggiungimi su Google+'/></a>
+<a href='http://www.youtube.com/user/parsifal32' target='_blank'><img alt='Segui il Canale di Youtube' src='https://lh6.googleusercontent.com/-yVl2tC0r6eE/UhKcw8fUsvI/AAAAAAAAjHs/u_Dmv0cH_r4/s72/youtube.png' title='Segui il Canale di Youtube'/></a>
+<a href='http://pinterest.com/parsifal32/' target='_blank'><img alt='Seguimi su Pinterest' src='https://lh6.googleusercontent.com/-zRDIREgp8wI/UhKcqNWjKKI/AAAAAAAAjHc/JsV5MLK7z40/s72/pinterest.png' title='Seguimi su Pinterest'/></a>
+      </div>
+   </div>
+<!-- Menu Flottante Fine -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   </head>
   <body>
     
