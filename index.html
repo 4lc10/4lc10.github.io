@@ -25,49 +25,10 @@
     
     
     
-       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type="text/javascript">
-            window.onload = function(){
-                
-                var immagini = new Array();
-                immagini[0] = "DOC.png";
-                immagini[1] = "JS.png";
-                immagini[2] = "PSD.png";
-                immagini[3] = "ASP.png";
-                
-                var links = new Array();
-                links[0] = "http://www.w3schools.com/";
-                links[1] = "http://www.php.net";
-                links[2] = "http://www.mrwebmaster.it";
-                links[3] = "http://www.google.it";
-                
-                var immagine = document.getElementById("slide");
-                var link = document.getElementById("link");
-                
-                var tempo = 300; // tempo per il cambio immagine
-                var i = 0; // incrementatore
-                var dir = "img/"; // percorso della cartlla immagini
-                
-                setInterval(function(){
-                    
-                    immagine.src = dir + immagini[i];
-                    link.href = links[i];
-                    i++;
-                    if(i == immagini.length) i = 0; // tolto il -1
-                    
-                },tempo);
-                
-            }
-        </script> 
-
   </head>
   <body>
 
- <a id="link" href="http://www.google.it"><img id="slide" src="http://www.smashbros.com/images/og/lucario.jpg" alt="img"/></a>
- <a id="link" href="http://www.google.it"><img id="slide" src="http://vignette1.wikia.nocookie.net/pokemon/images/1/19/448Lucario_Ranger2.png/revision/latest?cb=20140213140833" alt="img"/></a>
- <a id="link" href="http://www.google.it"><img id="slide" src="com/_pgJsqwwfAgc/S_QnpgfejYI/AAAAAAAAAZ4/ssqHLFiKvT8/s320/lucario_04.gif" alt="img"/></a>
-
-
+ 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
  <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" bgcolor="#000000">
